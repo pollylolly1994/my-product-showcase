@@ -150,7 +150,9 @@ function Portfolio() {
               Israel or with remote international teams.
             </p>
 
-            <p className="mt-8 text-lg font-bold text-brand-blue">Contact me:</p>
+            <p className="mt-8 text-lg font-bold">
+              <span className="mark-blue text-foreground">Contact me:</span>
+            </p>
             <ul className="mt-3 flex flex-col gap-2 text-[15px]">
               <li>
                 <a
