@@ -152,3 +152,33 @@
     color: var(--color-foreground);
   }
 }
+
+@theme inline {
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-soft: var(--brand-blue-soft);
+  --color-brand-butter: var(--brand-butter);
+  --color-brand-butter-soft: var(--brand-butter-soft);
+  --color-brand-choco: var(--brand-choco);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-soft: var(--brand-red-soft);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--brand-butter);
+  }
+}
+
+@utility mark-butter {
+  background-color: var(--brand-butter-soft);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0.05em 0.25em;
+}
