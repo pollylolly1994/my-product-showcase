@@ -44,7 +44,7 @@ const experience = [
     period: "May 2024 — Jan 2025",
     role: "Product Manager (Additional project)",
     company:
-      "Intrepidfox · London, UK (Remote) — early-stage AI startup for onboarding, KYC/KYB and monitoring automation in fintech",
+      "Intrepidfox · London, UK (Remote) · Early-stage AI startup for onboarding, KYC/KYB and monitoring automation in fintech",
     intro: "",
     points: [
       "Translated fintech compliance requirements into product features for an AI-powered onboarding platform and defined OCR- and LLM-based document verification requirements.",
