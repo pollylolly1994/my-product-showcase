@@ -115,15 +115,23 @@ function Portfolio() {
           aria-label="Polina Guliaeva"
           width="28"
           height="28"
-          viewBox="0 0 32 32"
+          viewBox="0 0 480 480"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="text-brand-red"
         >
-          <path
-            fill="currentColor"
-            d="M16 2C17.3 2 18.2 3.7 18.5 6.2C20.8 5.2 22.8 5.3 23.5 6.3C24.2 7.3 23.5 9.2 21.8 11C23.8 11.2 25.3 12.2 25.5 13.4C25.8 14.6 24.5 15.9 22.5 16.5C24.5 17.1 25.8 18.4 25.5 19.6C25.3 20.8 23.8 21.8 21.8 22C23.5 23.8 24.2 25.7 23.5 26.7C22.8 27.7 20.8 27.8 18.5 26.8C18.2 29.3 17.3 31 16 31C14.7 31 13.8 29.3 13.5 26.8C11.2 27.8 9.2 27.7 8.5 26.7C7.8 25.7 8.5 23.8 10.2 22C8.2 21.8 6.7 20.8 6.5 19.6C6.2 18.4 7.5 17.1 9.5 16.5C7.5 15.9 6.2 14.6 6.5 13.4C6.7 12.2 8.2 11.2 10.2 11C8.5 9.2 7.8 7.3 8.5 6.3C9.2 5.3 11.2 5.2 13.5 6.2C13.8 3.7 14.7 2 16 2ZM16 11.5C13.5 11.5 11.5 13.5 11.5 16C11.5 18.5 13.5 20.5 16 20.5C18.5 20.5 20.5 18.5 20.5 16C20.5 13.5 18.5 11.5 16 11.5Z"
-          />
+          <g transform="translate(240,240)">
+            <g transform="rotate(0)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(40)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(80)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(120)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(160)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(200)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(240)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(280)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <g transform="rotate(320)"><ellipse cx="0" cy="-95" rx="34" ry="60" fill="currentColor" /></g>
+            <circle cx="0" cy="0" r="42" fill="white" stroke="currentColor" stroke-width="3" />
+          </g>
         </svg>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-brand-red">
