@@ -250,7 +250,7 @@ function Portfolio() {
 
         <section id="projects" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            02 / projects
+            03 / projects
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">My projects</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
