@@ -116,6 +116,9 @@ function Portfolio() {
             <a href="#about" className="hover:text-brand-red">
               About
             </a>
+            <a href="#skills" className="hover:text-brand-red">
+              Skills
+            </a>
             <a href="#experience" className="hover:text-brand-red">
               Experience
             </a>
@@ -189,9 +192,39 @@ function Portfolio() {
           </div>
         </section>
 
+        <section id="skills" className="border-t border-border py-16 md:py-24">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
+            01 / skills
+          </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">My skills</h2>
+          <div className="mt-10 flex flex-wrap gap-3">
+            {[
+              "Product strategy & roadmap",
+              "Discovery & customer research",
+              "A/B testing & experimentation",
+              "Growth, retention & monetization",
+              "Cross-functional leadership",
+              "AI / ML product development",
+              "Fintech & regulated industries",
+              "UX research & design collaboration",
+              "Analytics & data-driven decisions",
+              "0 → 1 launches & scaling",
+              "Agile & delivery management",
+              "Stakeholder & executive communication",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-border px-4 py-2 text-[15px] font-medium text-foreground"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
+
         <section id="experience" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            01 / experience
+            02 / experience
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">Where I worked</h2>
           <div className="mt-12 flex flex-col gap-12">
@@ -220,7 +253,7 @@ function Portfolio() {
 
         <section id="projects" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            02 / projects
+            03 / projects
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">My projects</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
