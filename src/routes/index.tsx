@@ -109,9 +109,22 @@ const accentBar: Record<string, string> = {
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-10 border-b border-border bg-background">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 text-[13px]">
-          <span className="font-bold tracking-tight">Polina Guliaeva</span>
+    <header className="sticky top-0 z-10 border-b border-border bg-background">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 text-[13px]">
+        <svg
+          aria-label="Polina Guliaeva"
+          width="28"
+          height="28"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-brand-red"
+        >
+          <path
+            fill="currentColor"
+            d="M16 2C13.5 2 12 5.5 12 8C12 5.5 8.5 4 6 5C3.5 6 3 9.5 4.5 12C2 11.5 0 14 0 16.5C0 19 3.5 20 6 19C4.5 21.5 5.5 25 8 26C10.5 27 13 24.5 14 22C14.5 25 16 28 16 28C16 28 17.5 25 18 22C19 24.5 21.5 27 24 26C26.5 25 27.5 21.5 26 19C28.5 20 32 19 32 16.5C32 14 30 11.5 27.5 12C29 9.5 28.5 6 26 5C23.5 4 20 5.5 20 8C20 5.5 18.5 2 16 2ZM16 11.5C18.5 11.5 20.5 13.5 20.5 16C20.5 18.5 18.5 20.5 16 20.5C13.5 20.5 11.5 18.5 11.5 16C11.5 13.5 13.5 11.5 16 11.5Z"
+          />
+        </svg>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-brand-red">
               About
