@@ -116,6 +116,9 @@ function Portfolio() {
             <a href="#about" className="hover:text-brand-red">
               About
             </a>
+            <a href="#skills" className="hover:text-brand-red">
+              Skills
+            </a>
             <a href="#experience" className="hover:text-brand-red">
               Experience
             </a>
