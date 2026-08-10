@@ -129,7 +129,7 @@ function Portfolio() {
       <main className="mx-auto max-w-5xl px-6">
         <section id="about" className="grid gap-10 py-16 md:grid-cols-[1.15fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
-            <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
+            <h1 className="whitespace-nowrap text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
               Polina Guliaeva
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed md:text-xl">
