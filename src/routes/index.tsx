@@ -10,11 +10,11 @@ export const Route = createFileRoute("/")({
         content:
           "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries.",
       },
-      { property: "og:title", content: "Polina Guliaeva — Product Lead" },
+      { property: "og:title", content: "Polina Guliaeva — Product Lead & Senior Product Manager" },
       {
         property: "og:description",
         content:
-          "10+ years in product. B2B and B2C digital products, 0→1 launches, growth, retention and monetization.",
+          "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
