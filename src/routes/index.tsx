@@ -214,7 +214,7 @@ function Portfolio() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-border px-4 py-2 text-[15px] font-medium text-foreground"
+                className="rounded-full bg-brand-butter px-4 py-2 text-[15px] font-medium text-foreground"
               >
                 {skill}
               </span>
