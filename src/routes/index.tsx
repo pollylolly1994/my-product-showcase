@@ -129,7 +129,28 @@ const education = [
     school: "ITAM (Top 3 university in Mexico)",
   },
 ];
-
+const principles = [
+  {
+    title: "I build teams people want to be part of.",
+    text: "I care about what motivates each person and help them grow. My team gave me an 87% leader recommendation score, and three junior specialists grew into Product Managers.",
+  },
+  {
+    title: "I don't give up on hard problems.",
+    text: "I believe almost anything at work can be solved if you keep looking for a way. When a new tax regime gave us 1 month instead of the usual 6, we found one — and got certified on time.",
+  },
+  {
+    title: "I find fast solutions when speed matters.",
+    text: "I know when to cut scope, reuse what already exists, and ship the smallest thing that solves the problem.",
+  },
+  {
+    title: "I turn dependencies into partnerships.",
+    text: "Much of my work depended on other teams — and theirs on mine. I'm good at building trust with partner teams, aligning priorities, and getting things done together.",
+  },
+  {
+    title: "I care about beauty and quality.",
+    text: "I believe a product should not only work but also feel good to use. I work closely with designers to make every flow simple, clear, and polished.",
+  },
+];
 const certifications = [
   { name: "AI/ML Product Management Simulator", issuer: "GoPractice, 2026" },
   { name: "Data-driven Product Management Simulator", issuer: "GoPractice, 2020" },
@@ -181,6 +202,9 @@ function Portfolio() {
             </a>
             <a href="#projects" className="hover:text-brand-red">
               Projects
+            </a>
+                        <a href="#principles" className="hover:text-brand-red">
+              How I work
             </a>
             <a href="#education" className="hover:text-brand-red">
               Education
@@ -365,10 +389,26 @@ function Portfolio() {
             ))}
           </div>
         </section>
-
+        <section id="principles" className="border-t border-border py-16 md:py-24">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
+            04 / how I work
+          </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">How I work</h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {principles.map((p, i) => (
+              <article key={p.title} className="border border-border p-7">
+                <p className="text-4xl font-extrabold tracking-tight text-brand-red">
+                  0{i + 1}
+                </p>
+                <h3 className="mt-3 text-2xl font-bold leading-snug">{p.title}</h3>
+                <p className="mt-4 leading-relaxed text-muted-foreground">{p.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
         <section id="education" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            04 / education
+            05 / education
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">Education & certifications</h2>
           <div className="mt-12 grid gap-12 md:grid-cols-2">
