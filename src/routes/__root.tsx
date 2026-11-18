@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -34,7 +35,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -79,12 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Polina Guliaeva — Product Lead & Senior Product Manager" },
       { name: "description", content: "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Polina Guliaeva" },
       { property: "og:title", content: "Polina Guliaeva — Product Lead & Senior Product Manager" },
       { property: "og:description", content: "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Polina Guliaeva — Product Lead & Senior Product Manager" },
       { name: "twitter:description", content: "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24b18da4d279408c473b1c8e0e63bc47/id-preview-6416ade4--ebbe41b4-3688-489d-9d74-5fe984236ac0.lovable.app-1786351671394.png" },

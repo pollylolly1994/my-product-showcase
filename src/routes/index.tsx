@@ -8,13 +8,14 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries.",
+          "Product Lead with 10+ years building B2B and B2C digital products for small businesses in fintech, from 0 to 1 launches to AI-powered automation.",
       },
+      { name: "author", content: "Polina Guliaeva" },
       { property: "og:title", content: "Polina Guliaeva — Product Lead & Senior Product Manager" },
       {
         property: "og:description",
         content:
-          "Product Lead with 10+ years building and scaling B2B and B2C digital products for small businesses, entrepreneurs and regulated industries.",
+          "Product Lead with 10+ years building B2B and B2C digital products for small businesses in fintech, from 0 to 1 launches to AI-powered automation.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,14 +31,14 @@ const experience = [
     company:
       "Raiffeisen Bank · Russian subsidiary of Raiffeisen Bank International, Top 10 bank in Russia by assets",
     intro:
-      "Owned product strategy, roadmap and delivery for a portfolio of digital products serving 10,000+ small business customers across mobile and online banking: online accounting, tax reporting, tax savings, freelancer management, document builder, fine payments and customer communication services.",
+      "Grew from intern to product team lead over 10 years, owning product strategy, roadmap, and delivery for a portfolio of digital products serving 10,000+ small business customers across mobile and online banking: online accounting, tax reporting, tax savings, freelancer management, document builder, fine payments, and customer communication services. Led a 30+ cross-functional team, mentored 3+ junior specialists into Product Managers, and achieved an 87% leader recommendation score. Selected for the bank's High Potential talent program and named as the designated successor to the Head of Product.",
     points: [
-      "Grew the self-employed customer base from 0 to 5,000 clients within one year by leading the greenfield launch of a mobile banking product under strict regulatory requirements, coordinating a 20-member cross-functional team.",
+      "Grew the self-employed customer base from 0 to 5,000 clients within one year by leading the greenfield launch of a mobile banking product under strict regulatory requirements.",
       "Increased customer retention by 10 p.p. among 10,000+ SME users by defining the ecosystem strategy and launching 5 integrated services.",
-      "Launched a paid online accounting service with a subscription model generating ~$280K ARR, then shifted to freemium based on LTV and retention analysis.",
-      "Achieved tax regulator certification for a greenfield product in 1 month instead of the typical 6, leading 20 cross-functional teams and preventing the loss of up to 10% of the customer base.",
-      "Increased automated resolution rate of SME online chat from 20% to 40% over three years via ML intent classification, LLM-powered responses and A/B testing.",
-      "Defined product roadmap and investment priorities using customer research, UX studies, Fake Door experiments, A/B testing and competitive analysis.",
+      "Launched a paid online accounting service with a subscription model, generating ~$280K ARR, with around 80% of customers still using the service after one year.",
+      "Ran an A/B pricing test on the premium plan: its share of subscriptions grew from 3% to 10%, revenue grew by 74%, and month-5 payment rate rose from 42% to 63%.",
+      "Achieved tax regulator certification for a greenfield product in 1 month instead of the typical 6 by defining minimum viable scope and reusing existing technical solutions, preventing the loss of up to 10% of the customer base.",
+      "Doubled the automated resolution rate of the SME support chat from 20% to 40% over three years with ML intent classification, LLM-powered responses, and automated action flows, saving 4 FTE while keeping CSAT at 80%.",
     ],
   },
   {
@@ -59,44 +60,79 @@ const projects = [
     tag: "0 → 1 · Mobile banking",
     title: "Self-employed banking product",
     result: "0 → 5,000 clients",
-    text: "Greenfield launch under strict regulatory requirements in one year, coordinating a 20-member cross-functional team and combining organic growth with targeted acquisition campaigns.",
+    problem:
+      "A new self-employed segment needed a banking product, under strict regulatory requirements.",
+    did: "Led the greenfield launch of a mobile banking product, combining organic growth with targeted acquisition campaigns.",
+    outcome: "5,000 clients within the first year.",
     accent: "blue" as const,
   },
   {
     tag: "Ecosystem · Retention",
     title: "SME services ecosystem",
     result: "+10 p.p. retention",
-    text: "Ecosystem strategy and launch of 5 integrated services for 10,000+ SME users: online accounting, tax savings, unified tax account balance and fine payments.",
+    problem: "Small business customers used separate services and had few reasons to stay.",
+    did: "Defined the ecosystem strategy and launched 5 integrated services: online accounting, tax savings, unified tax account balance, and fine payments.",
+    outcome: "Retention grew by 10 p.p. among 10,000+ SME users.",
     accent: "butter" as const,
   },
   {
-    tag: "Monetization",
-    title: "Paid online accounting",
-    result: "~$280K ARR",
-    text: "Subscription service launched from scratch, later moved to a freemium model based on LTV and retention analysis — improving adoption while keeping recurring revenue.",
+    tag: "AI · Automation",
+    title: "AI support chat",
+    result: "20% → 40%",
+    problem:
+      "Many customers waited for an operator to fix routine issues, such as payments they couldn't confirm.",
+    did: "Improved ML intent classification, introduced LLM-powered responses, and designed automated flows that fixed issues end to end — for example, detecting a SIM change that blocked payment confirmation and triggering a phone number update — with escalation to a human for complex cases.",
+    outcome: "Automated resolution doubled, saving 4 FTE while keeping CSAT at 80%.",
+    accent: "blue" as const,
+  },
+  {
+    tag: "Monetization · Experiment",
+    title: "Premium plan pricing test",
+    result: "+74% revenue",
+    problem: "The most expensive of three subscription plans had only 3% of subscriptions.",
+    did: "Ran an A/B test offering a lifetime 50% discount to half of new customers.",
+    outcome: "The plan's share grew to 10%, revenue grew by 74%, and month-5 payments rose from 42% to 63%.",
     accent: "red" as const,
   },
   {
     tag: "Regulatory · Speed",
     title: "New tax regime product",
     result: "1 month vs 6",
-    text: "Regulator certification achieved in a sixth of the usual time by defining minimum viable scope, reusing existing technical solutions and partnering with government stakeholders.",
+    problem:
+      "A new tax regime required a certified product in 1 month instead of the usual 6, or we risked losing up to 10% of customers.",
+    did: "Defined minimum viable scope, reused existing technical solutions, integrated with the tax authority via API, and partnered with government stakeholders.",
+    outcome: "Certified in 1 month, keeping our customers.",
     accent: "choco" as const,
-  },
-  {
-    tag: "AI · Automation",
-    title: "SME chat automation",
-    result: "20% → 40%",
-    text: "Automated resolution rate doubled over three years through improved ML intent classification, LLM-powered responses, automated journeys and A/B validation.",
-    accent: "blue" as const,
   },
   {
     tag: "AI SaaS · Fintech",
     title: "AI onboarding & KYC/KYB",
     result: "2 clients activated",
-    text: "OCR- and LLM-based document verification requirements for an AI-powered onboarding platform, plus product reporting and funnel analytics for international fintech clients.",
+    problem: "Fintech clients needed faster, automated customer onboarding and verification.",
+    did: "Translated compliance requirements into product features and defined OCR- and LLM-based document verification.",
+    outcome: "Moved two clients from contract signing to active use and supported acquiring one more.",
     accent: "butter" as const,
   },
+];
+
+const education = [
+  {
+    degree: "Master's degree, Business Informatics, 2016–2018",
+    school: "Higher School of Economics (Top 3 university in Russia)",
+  },
+  {
+    degree: "Bachelor's degree, Economics, 2012–2016",
+    school: "Higher School of Economics & New Economic School",
+  },
+  {
+    degree: "Exchange program, Economics, 2014–2015",
+    school: "ITAM (Top 3 university in Mexico)",
+  },
+];
+
+const certifications = [
+  { name: "AI/ML Product Management Simulator", issuer: "GoPractice, 2026" },
+  { name: "Data-driven Product Management Simulator", issuer: "GoPractice, 2020" },
 ];
 
 const accentBar: Record<string, string> = {
@@ -146,6 +182,9 @@ function Portfolio() {
             <a href="#projects" className="hover:text-brand-red">
               Projects
             </a>
+            <a href="#education" className="hover:text-brand-red">
+              Education
+            </a>
           </div>
         </nav>
       </header>
@@ -157,19 +196,21 @@ function Portfolio() {
               Polina Guliaeva
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed md:text-xl">
-              I am a <span className="mark-butter font-bold">Product Lead</span> with 10+ years of
+              I'm a <span className="mark-butter font-bold">Product Lead</span> with 10+ years of
               experience building and scaling B2B and B2C digital products for small businesses,
               entrepreneurs, and regulated industries.
             </p>
             <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-              For the past five years, I have led a cross-functional product team of 30+
-              professionals across Product, Engineering, Design, Research, and Analytics. My
-              experience spans the full product lifecycle, from discovery and strategy to delivery,
-              monetization, scaling, and people development.
+              At Raiffeisen Bank, I grew from intern to product team lead. For the past five years,
+              I led a cross-functional team of 30+ people across Product, Engineering, Design, and
+              Analytics, and owned a portfolio of digital products for small business customers. My
+              experience spans the full product lifecycle — from discovery and strategy to delivery,
+              monetization, scaling, and people development — and more recently, AI-powered
+              products.
             </p>
             <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-              I am based in Tel Aviv and authorized to work in Israel. I am open to opportunities in
-              Israel or with remote international teams.
+              I'm based in Tel Aviv, authorized to work in Israel, and open to remote roles with
+              international teams.
             </p>
 
             <p className="mt-8 text-lg font-bold">
@@ -186,14 +227,6 @@ function Portfolio() {
               </li>
               <li>
                 <a
-                  href="https://t.me/pollylolly94"
-                  className="inline-flex items-center gap-2 hover:text-brand-red"
-                >
-                  <span aria-hidden="true">✈️</span> @pollylolly94
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://www.linkedin.com/in/polina-guliaeva"
                   className="inline-flex items-center gap-2 hover:text-brand-red"
                 >
@@ -201,6 +234,12 @@ function Portfolio() {
                 </a>
               </li>
             </ul>
+            <a
+              href="/Polina_Guliaeva_CV.pdf"
+              className="mt-6 inline-flex w-fit items-center rounded-full bg-brand-red px-6 py-3 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
+            >
+              Download CV
+            </a>
           </div>
           <div className="flex items-center justify-center">
             <img
@@ -240,6 +279,24 @@ function Portfolio() {
                 {skill}
               </span>
             ))}
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-choco">
+                Tools
+              </h3>
+              <p className="mt-3 leading-relaxed">
+                SQL • Amplitude • Power BI • Jira • Confluence • Claude • Lovable
+              </p>
+            </div>
+            <div>
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-choco">
+                Languages
+              </h3>
+              <p className="mt-3 leading-relaxed">
+                English (C1) • Russian (native) • Hebrew (basic)
+              </p>
+            </div>
           </div>
         </section>
 
@@ -287,17 +344,65 @@ function Portfolio() {
                   </p>
                   <h3 className="mt-3 text-2xl font-bold leading-snug">{p.title}</h3>
                   <p className="mt-4 text-4xl font-extrabold tracking-tight">{p.result}</p>
-                  <p className="mt-4 leading-relaxed text-muted-foreground">{p.text}</p>
+                  <dl className="mt-4 flex flex-col gap-3 leading-relaxed text-muted-foreground">
+                    <div>
+                      <dt className="font-bold text-foreground">Problem</dt>
+                      <dd>{p.problem}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-bold text-foreground">What I did</dt>
+                      <dd>{p.did}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-bold text-foreground">Result</dt>
+                      <dd>{p.outcome}</dd>
+                    </div>
+                  </dl>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="education" className="border-t border-border py-16 md:py-24">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
+            04 / education
+          </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">Education & certifications</h2>
+          <div className="mt-12 grid gap-12 md:grid-cols-2">
+            <div>
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-choco">
+                Education
+              </h3>
+              <ul className="mt-6 flex flex-col gap-6">
+                {education.map((e) => (
+                  <li key={e.degree}>
+                    <p className="font-bold leading-snug">{e.degree}</p>
+                    <p className="mt-1 text-muted-foreground">{e.school}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-choco">
+                Certifications
+              </h3>
+              <ul className="mt-6 flex flex-col gap-6">
+                {certifications.map((c) => (
+                  <li key={c.name}>
+                    <p className="font-bold leading-snug">{c.name}</p>
+                    <p className="mt-1 text-muted-foreground">{c.issuer}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-10 text-[13px] text-muted-foreground">
-          <span>© 2026 · Polina Guliaeva</span>
+          <span>© 2026 · Polina Guliaeva · Designed and built by me with Lovable.</span>
           <div className="flex gap-5">
             <a href="https://t.me/pollylolly94" className="hover:text-brand-red">
               Telegram
