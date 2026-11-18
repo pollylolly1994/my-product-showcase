@@ -236,6 +236,8 @@ function Portfolio() {
             </ul>
             <a
               href="/Polina_Guliaeva_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex w-fit items-center rounded-full bg-brand-red px-6 py-3 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
             >
               Download CV
