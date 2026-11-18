@@ -133,6 +133,35 @@ const education = [
     school: "ITAM (Top 3 university in Mexico)",
   },
 ];
+const journey = [
+  { year: "1994", title: "Born in Novosibirsk", text: "", image: "" },
+  { year: "2012", title: "Moved to Moscow", text: "Started studying economics at HSE & NES", image: "" },
+  { year: "2014", title: "Exchange in Mexico City", text: "Economics at ITAM", image: "" },
+  { year: "2016", title: "Trainee at Raiffeisen Bank", text: "Retail: Apple Pay & Samsung Pay launch in Russia", image: "" },
+  { year: "2016", title: "Junior Product Manager", text: "", image: "" },
+  { year: "2018", title: "Product Manager", text: "", image: "" },
+  { year: "2019", title: "Senior Product Manager", text: "", image: "" },
+  { year: "2020", title: "Product Lead", text: "Led a 30+ cross-functional team", image: "" },
+  { year: "2022", title: "Moved to Georgia", text: "", image: "" },
+  { year: "2023", title: "Moved to Israel", text: "Olah chadasha in Tel Aviv", image: "" },
+  { year: "2026", title: "Open to work", text: "Looking for my next product role", image: "" },
+];
+
+const wavePath = journey
+  .map((_, i) => {
+    const x = i * 100 + 50;
+    const y = i % 2 ? 60 : 20;
+    if (i === 0) return `M ${x} ${y}`;
+    const prevX = (i - 1) * 100 + 50;
+    const prevY = (i - 1) % 2 ? 60 : 20;
+    const midX = (prevX + x) / 2;
+    return `C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
+  })
+  .join(" ");
+
+const raifStart = journey.findIndex((s) => s.year === "2016");
+const raifEnd = journey.length - 1;
+
 const principles = [
   {
     title: "I build teams people want to be part of.",
@@ -197,6 +226,9 @@ function Portfolio() {
           <div className="flex gap-6">
             <a href="#about" className="hover:text-brand-red">
               About
+            </a>
+            <a href="#journey" className="hover:text-brand-red">
+              My way
             </a>
             <a href="#skills" className="hover:text-brand-red">
               Skills
@@ -282,9 +314,87 @@ function Portfolio() {
           </div>
         </section>
 
+        <section id="journey" className="border-t border-border py-16 md:py-24">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
+            01 / my way
+          </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">My way</h2>
+          <div className="mt-12 overflow-x-auto pb-4">
+            <div className="relative min-w-[1200px]">
+              <div className="flex">
+                {journey.map((step) => (
+                  <div key={step.year + step.title} className="flex flex-1 justify-center px-2">
+                    {step.image ? (
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className="h-20 w-20 rounded-2xl object-cover"
+                      />
+                    ) : (
+                      <div className="h-20 w-20 rounded-2xl bg-brand-butter" />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="relative mt-4 h-20">
+                <svg
+                  className="absolute inset-0 h-full w-full text-brand-red"
+                  viewBox={`0 0 ${journey.length * 100} 80`}
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d={wavePath}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+                {journey.map((step, i) => (
+                  <span
+                    key={step.year + step.title}
+                    className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-background bg-brand-red"
+                    style={{
+                      left: `${((i + 0.5) / journey.length) * 100}%`,
+                      top: `${((i % 2 ? 60 : 20) / 80) * 100}%`,
+                    }}
+                  />
+                ))}
+              </div>
+
+              <div className="mt-4 flex">
+                {journey.map((step) => (
+                  <div key={step.year + step.title} className="flex-1 px-2 text-center">
+                    <p className="text-2xl font-extrabold">{step.year}</p>
+                    <p className="mt-1 text-[14px] font-bold leading-snug">{step.title}</p>
+                    {step.text ? (
+                      <p className="mt-1 text-[13px] leading-snug text-muted-foreground">
+                        {step.text}
+                      </p>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+
+              <div className="relative mt-6 h-12">
+                <div
+                  className="absolute top-0 flex h-full items-center justify-center rounded-full bg-brand-butter px-4 text-[14px] font-bold"
+                  style={{
+                    left: `${((raifStart + 0.5) / journey.length) * 100}%`,
+                    width: `${((raifEnd - raifStart) / journey.length) * 100}%`,
+                  }}
+                >
+                  Raiffeisen Bank · 2016–2026
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="skills" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            01 / skills
+            02 / skills
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">My skills</h2>
           <div className="mt-10 flex flex-wrap gap-3">
@@ -332,7 +442,7 @@ function Portfolio() {
 
         <section id="experience" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            02 / experience
+            03 / experience
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">Where I worked</h2>
           <div className="mt-12 flex flex-col gap-12">
@@ -372,7 +482,7 @@ function Portfolio() {
 
         <section id="projects" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            03 / projects
+            04 / projects
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">My projects</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -406,7 +516,7 @@ function Portfolio() {
         </section>
         <section id="principles" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            04 / principles 
+            05 / principles 
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">How I work</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -423,7 +533,7 @@ function Portfolio() {
         </section>
         <section id="education" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            05 / education
+            06 / education
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">Education & certifications</h2>
           <div className="mt-12 grid gap-12 md:grid-cols-2">
