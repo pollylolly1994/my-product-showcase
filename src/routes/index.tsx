@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 const experience = [
   {
     period: "Feb 2016 — Apr 2026",
-    role: "Senior Product Manager",
+    role: "Product Lead",
     company:
       "Raiffeisen Bank · Russian subsidiary of Raiffeisen Bank International, Top 10 bank in Russia by assets",
     intro:
