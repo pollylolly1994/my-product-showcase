@@ -30,7 +30,8 @@ const experience = [
     role: "Product Lead",
     company:
       "Raiffeisen Bank · Russian subsidiary of Raiffeisen Bank International, Top 10 bank in Russia by assets",
-    intro:
+     url: "https://www.raiffeisen.ru/en/",
+      intro:
       "Grew from intern to product team lead over 10 years, owning product strategy, roadmap, and delivery for a portfolio of digital products serving 10,000+ small business customers across mobile and online banking: online accounting, tax reporting, tax savings, freelancer management, document builder, fine payments, and customer communication services. Led a 30+ cross-functional team, mentored 3+ junior specialists into Product Managers, and achieved an 87% leader recommendation score. Selected for the bank's High Potential talent program and named as the designated successor to the Head of Product.",
     points: [
       "Grew the self-employed customer base from 0 to 5,000 clients within one year by leading the greenfield launch of a mobile banking product under strict regulatory requirements.",
@@ -46,7 +47,8 @@ const experience = [
     role: "Product Manager (Additional project)",
     company:
       "Intrepidfox · London, UK (Remote) · Early-stage AI startup for onboarding, KYC/KYB and monitoring automation in fintech",
-    intro: "",
+     url: "https://www.intrepidfox.tech/",
+      intro: "",
     points: [
       "Translated fintech compliance requirements into product features for an AI-powered onboarding platform and defined OCR- and LLM-based document verification requirements.",
       "Moved two existing clients from contract signing to active product use.",
@@ -204,7 +206,7 @@ function Portfolio() {
               Projects
             </a>
                         <a href="#principles" className="hover:text-brand-red">
-              How I work
+              Principles
             </a>
             <a href="#education" className="hover:text-brand-red">
               Education
@@ -339,7 +341,17 @@ function Portfolio() {
                 </p>
                 <div>
                   <h3 className="text-2xl font-bold">{job.role}</h3>
-                  <p className="mt-1 text-muted-foreground">{job.company}</p>
+                                    <p className="mt-1 text-muted-foreground">
+                    {job.company}{" "}
+                    <a
+                      href={job.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whitespace-nowrap font-medium text-brand-red hover:underline"
+                    >
+                      Visit website ↗
+                    </a>
+                  </p>
                   {job.intro ? <p className="mt-4 leading-relaxed">{job.intro}</p> : null}
                   <ul className="mt-4 flex flex-col gap-2">
                     {job.points.map((p) => (
@@ -391,7 +403,7 @@ function Portfolio() {
         </section>
         <section id="principles" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            04 / Principles 
+            04 / principles 
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">How I work</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
