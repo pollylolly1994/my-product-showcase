@@ -28,9 +28,10 @@ const experience = [
   {
     period: "Feb 2016 — Apr 2026",
     role: "Product Lead",
+    name: "Raiffeisen Bank",
     company:
-      "Raiffeisen Bank · Russian subsidiary of Raiffeisen Bank International, Top 10 bank in Russia by assets",
-     url: "https://www.raiffeisen.ru/en/",
+      "Russian subsidiary of Raiffeisen Bank International, Top 10 bank in Russia by assets",
+    url: "https://www.raiffeisen.ru/en/",
       intro:
       "Grew from intern to product team lead over 10 years, owning product strategy, roadmap, and delivery for a portfolio of digital products serving 10,000+ small business customers across mobile and online banking: online accounting, tax reporting, tax savings, freelancer management, document builder, fine payments, and customer communication services. Led a 30+ cross-functional team, mentored 3+ junior specialists into Product Managers, and achieved an 87% leader recommendation score. Selected for the bank's High Potential talent program and named as the designated successor to the Head of Product.",
     points: [
@@ -45,9 +46,10 @@ const experience = [
   {
     period: "May 2024 — Jan 2025",
     role: "Product Manager (Additional project)",
+    name: "Intrepidfox",
     company:
-      "Intrepidfox · London, UK (Remote) · Early-stage AI startup for onboarding, KYC/KYB and monitoring automation in fintech",
-     url: "https://www.intrepidfox.tech/",
+      "London, UK (Remote) · Early-stage AI startup for onboarding, KYC/KYB and monitoring automation in fintech",
+    url: "https://www.intrepidfox.tech/",
       intro: "",
     points: [
       "Translated fintech compliance requirements into product features for an AI-powered onboarding platform and defined OCR- and LLM-based document verification requirements.",
@@ -341,16 +343,17 @@ function Portfolio() {
                 </p>
                 <div>
                   <h3 className="text-2xl font-bold">{job.role}</h3>
-                                    <p className="mt-1 text-muted-foreground">
-                    {job.company}{" "}
+                  <p className="mt-1 text-muted-foreground">
                     <a
                       href={job.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="whitespace-nowrap font-medium text-brand-red hover:underline"
+                      className="font-medium text-foreground underline decoration-brand-red underline-offset-4 hover:text-brand-red"
                     >
-                      Visit website ↗
+                      {job.name}
                     </a>
+                    {" · "}
+                    {job.company}
                   </p>
                   {job.intro ? <p className="mt-4 leading-relaxed">{job.intro}</p> : null}
                   <ul className="mt-4 flex flex-col gap-2">
