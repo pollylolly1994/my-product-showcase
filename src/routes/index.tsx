@@ -391,7 +391,7 @@ function Portfolio() {
         </section>
         <section id="principles" className="border-t border-border py-16 md:py-24">
           <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            04 / how I work
+            04 / Principles 
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight">How I work</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
